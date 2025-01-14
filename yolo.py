@@ -23,7 +23,7 @@ class YOLO:
 
         # Load custom YOLO model (replace the default loading code)
         try:
-            self.model = torch.hub.load("ultralytics/yolov5", "custom", path=model_path)
+            self.model = torch.hub.load("ultralytics/yolo11s", "custom", path=model_path)
             self.model.to(device)
         except Exception as e:
             raise Exception(f"Failed to load model from {model_path}. Error: {e}")
