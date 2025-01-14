@@ -31,9 +31,9 @@ class YOLO:
     def __call__(
         self,
         img: Union[str, np.ndarray],
-        conf_threshold: float = 0.25,
-        iou_threshold: float = 0.45,
-        image_size: int = 720,
+        conf_threshold: float = 0.4,
+        iou_threshold: float = 0.4,
+        image_size: int = 1080,
         classes: Optional[List[int]] = None,
     ) -> torch.tensor:
         self.model.conf = conf_threshold
